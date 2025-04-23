@@ -24,8 +24,8 @@ if __name__ == "__main__":
     p.setPhysicsEngineParameter(numSolverIterations=5000)
 
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
-    p.loadURDF("cube.urdf", [1.7, 0, 0.0], p.getQuaternionFromEuler(
-        [np.pi/2, 0, np.pi/2]), useFixedBase=False)
+    p.loadURDF("cube.urdf", [1.9, 0, 0], p.getQuaternionFromEuler(
+        [np.pi/2, 0, np.pi/2]), useFixedBase=True)
 
     robot = pi.RobotBase(urdf_file1, [0, 0, 0], [0, 0, 0, 1])
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     steps = 500
     test_path_2 = pi.linear_interpolation(
-        [1.9-0.5, -0.4, 0.7], [1.9+0.5, -0.4, 0.7], steps)
+        [1.9-0.4, -0.4, 0.7], [1.9+0.4, -0.4, 0.7], steps)
 
     start_position, start_orientation = test_path_2.get_start_pose()
     for i in range(20):

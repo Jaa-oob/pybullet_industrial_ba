@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="camera">
   <link name="baseLink">
-    <contact>
-      <lateral_friction value="1.0"/>
-      <rolling_friction value="0.0"/>
-      <contact_cfm value="0.0"/>
+    <contact> <!-- Eine Erweiterung des Standart URDF für weitere Parameter für die Simulation -->
+      <lateral_friction value="1.0"/> <!-- Reibungswiderstand -->
+      <rolling_friction value="0.0"/> <!-- Rollreibungswiderstand -->
+      <contact_cfm value="0.0"/> <!-- Constraint Force Mixing -->
       <contact_erp value="1.0"/>
     </contact>
     <inertial>
